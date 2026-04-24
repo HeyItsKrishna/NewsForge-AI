@@ -22,7 +22,7 @@ gcloud run deploy "${SERVICE_NAME}" \
   --min-instances 0 \
   --max-instances 5 \
   --timeout 300 \
-  --set-env-vars "GOOGLE_API_KEY=${GOOGLE_API_KEY},NEWS_API_KEY=${NEWS_API_KEY},MODEL=gemini-2.5-flash-preview-04-17" \
+  --set-env-vars "GOOGLE_API_KEY=${GOOGLE_API_KEY},NEWS_API_KEY=${NEWS_API_KEY},MODEL=gemini-2.0-flash" \
   --project="${PROJECT_ID}" \
   --quiet
 SERVICE_URL=$(gcloud run services describe "${SERVICE_NAME}" --platform managed --region "${REGION}" --project="${PROJECT_ID}" --format="value(status.url)")

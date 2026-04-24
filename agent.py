@@ -31,7 +31,7 @@ def create_agent():
     )
     agent = LlmAgent(
         name="newsforge_ai",
-        model=os.environ.get("MODEL", "gemini-2.5-flash-preview-04-17"),
+        model=os.environ.get("MODEL", "gemini-2.5-flash"),
         instruction=AGENT_INSTRUCTION,
         tools=[mcp_toolset],
         description="NewsForge AI — intelligent news analysis agent powered by Google ADK and MCP."
